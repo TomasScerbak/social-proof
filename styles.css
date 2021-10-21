@@ -19,23 +19,168 @@ body {
   box-sizing: border-box;
 }
 h1 {
-  font-size: 4rem;
-}
-h2 {
   font-size: 3rem;
 }
-h3 {
+h2 {
   font-size: 2rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+h4 {
+  margin: 0;
 }
 p {
   font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 3.5rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 2rem;
+  }
+}
+/* Background Images */
+.background--image-top {
+  position: absolute;
+  top: 0;
+}
+@media screen and (min-width: 768px) {
+  .background--image-top {
+    background-image: url(/Images/bg-pattern-top-desktop.svg);
+  }
 }
 /* Container */
 .container {
   text-align: center;
+  padding: 1.5rem;
 }
 @media screen and (min-width: 768px) {
   .container {
     display: flex;
+    padding: 5rem;
+  }
+  .users {
+    flex: 1;
+    text-align: left;
+  }
+  .rating {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  .rating__text {
+    margin-left: 3rem;
+  }
+}
+/* User Card */
+.user__heading {
+  color: var(--color-very-dark-magenta);
+}
+.user__text {
+  color: var(--color-dark-grayish-magenta);
+  font-weight: 500;
+}
+/* Stars */
+.review--box > img {
+  padding: 0.3rem;
+  margin-bottom: 0;
+  margin-top: 1rem;
+  object-fit: contain;
+}
+/* Review Boxes */
+.rating {
+  margin-top: 3rem;
+}
+.review--box {
+  border-radius: 10px;
+  background-color: var(--color-light-grayish-magenta);
+  margin: 1rem;
+  padding: 0.2rem 5rem;
+}
+.rating__text {
+  color: var(--color-very-dark-magenta);
+  white-space: nowrap;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .review--box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 5rem 0.5rem 2rem;
+  }
+  .review--box > img {
+    margin-top: 0;
+  }
+  .review-one {
+    margin-right: 15rem;
+  }
+  .review-three {
+    margin-left: 15rem;
+  }
+  .rating__text {
+    margin-top: 2rem;
+  }
+}
+/* Cards */
+.card {
+  text-align: left;
+  border-radius: 10px;
+  background-color: var(--color-very-dark-magenta);
+  padding: 3rem;
+  margin-bottom: 2rem;
+}
+.media {
+  display: flex;
+}
+.media__image {
+  border-radius: 100%;
+  width: 5rem;
+  height: 5rem;
+  margin-right: 2rem;
+}
+.media__name {
+  margin-top: 0.8rem;
+  color: var(--color-white);
+  font-size: 1.3rem;
+}
+.media__user {
+  color: var(--color-soft-pink);
+  font-size: 1.3rem;
+}
+q {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+.media__quote {
+  margin-top: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .card {
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
+  .container-two {
+    position: absolute;
+  }
+  .card-two {
+    position: relative;
+    top: 2.5rem;
+  }
+  .card-three {
+    position: relative;
+    top: 5rem;
   }
 }
